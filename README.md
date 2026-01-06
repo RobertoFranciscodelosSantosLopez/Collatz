@@ -12,7 +12,7 @@ This constant proves that:
    certainty of the bit-parity system.
 3. No number can maintain a growth-favorable density (ρ < 0.36) over 
    infinite iterations.
-   ### 🚀 NEW: The López High-Speed Predictive Engine
+   ### NEW: The López High-Speed Predictive Engine
 
 I have integrated a major theoretical breakthrough: The López Stabilization Constant (λL). 
 This engine moves beyond iterative simulation to provide asymptotic predictions of 
