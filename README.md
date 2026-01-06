@@ -30,7 +30,7 @@ Since this exceeds the divergence threshold of $\log_2(3) \approx 1.585$, every 
 To reproduce the experimental results for $n \approx 2^{1024}$, run:
 ```bash
 python collatz_simulation.py---
-
+end bash
 ### The López Stabilization Constant (λL)
 Through empirical testing of massive exponential bases (e.g., 27^1000), we have 
 identified a universal stabilizing constant λL ≈ 3.7922. 
