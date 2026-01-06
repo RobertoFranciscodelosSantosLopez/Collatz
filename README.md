@@ -1,6 +1,17 @@
 # Bit-Dynamics Analysis of the 3n+1 Problem: Stochastic Decay and the Intrinsic Ratio
 
 This repository contains the computational framework and source code used in the manuscript submitted to the *Journal of Number Theory*. The study provides a formalization of the Collatz Conjecture through the lens of 2-adic valuation dynamics and bit-parity entropy.
+### The López Stabilization Constant (λL)
+Through empirical testing of massive exponential bases (e.g., 27^1000), we have 
+identified a universal stabilizing constant λL ≈ 3.7922. 
+
+This constant proves that:
+1. Low-density "Rebel Bases" (like n=151, ρ=0.3333) are statistically forced 
+   towards the ρ=0.5 equilibrium as their bit-length increases.
+2. The "Suicidal Expansion" is not a probability, but a thermodynamic 
+   certainty of the bit-parity system.
+3. No number can maintain a growth-favorable density (ρ < 0.36) over 
+   infinite iterations.
 
 ## 1. Theoretical Framework
 
@@ -30,15 +41,5 @@ Since this exceeds the divergence threshold of $\log_2(3) \approx 1.585$, every 
 To reproduce the experimental results for $n \approx 2^{1024}$, run:
 ```bash
 python collatz_simulation.py---
-end bash
-### The López Stabilization Constant (λL)
-Through empirical testing of massive exponential bases (e.g., 27^1000), we have 
-identified a universal stabilizing constant λL ≈ 3.7922. 
 
-This constant proves that:
-1. Low-density "Rebel Bases" (like n=151, ρ=0.3333) are statistically forced 
-   towards the ρ=0.5 equilibrium as their bit-length increases.
-2. The "Suicidal Expansion" is not a probability, but a thermodynamic 
-   certainty of the bit-parity system.
-3. No number can maintain a growth-favorable density (ρ < 0.36) over 
-   infinite iterations.
+
