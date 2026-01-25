@@ -1,0 +1,25 @@
+def collatz_bit_dynamics(n):
+    steps = 0
+    max_n = n
+    print(f"Analizando candidato: {n} (Bits: {n.bit_length()})")
+    
+    while n > 1:
+        if n % 2 == 0:
+            # REDUCTIVE: El número pierde bits de magnitud
+            n //= 2
+        else:
+            # EXPANSIVE: Se activa 3n + 1 (2n + n + 1)
+            # Aquí ocurre la "Saturación de Acarreo"
+            n = 3 * n + 1
+        
+        steps += 1
+        if n > max_n: max_n = n
+        
+        # Monitoreo de seguridad para el ciclo 4,2,1
+        if n == 1:
+            return steps, max_n
+
+# Probar candidatos cercanos al límite de 2^68
+start_val = 2**68 - 1 # Un número impar masivo (Potencial Rebel/Mutant)
+steps, peak = collatz_bit_dynamics(start_val)
+print(f"Resultado: Convergencia en {steps} pasos. Pico máximo: {peak}")
